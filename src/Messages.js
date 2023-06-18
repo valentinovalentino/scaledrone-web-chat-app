@@ -5,7 +5,7 @@ import React from "react";
 class Messages extends Component {
 	// funkcija za poruku
 	render() {
-		//varjabla mapa poruka koje proslijedimo
+		//varijabla mapa poruka koje proslijedimo
 		const { messages } = this.props;
 		return (
 			//lista poruka koje stvaramo u mapu
@@ -25,9 +25,14 @@ class Messages extends Component {
 			: "Messages-message";
 		return (
 			<li className={className}>
-				<span className='avatar' style={{ backgroundColor: member.color }} />
+				<span
+					className='avatar'
+					style={{ backgroundColor: member /*.clientData*/.color }}
+				/>{" "}
+				{/* scaledrone clientData sidro za boju korisnika */}
 				<div className='Message-content'>
-					<div className='username'>{member.username}</div>
+					<div className='username'>{member /*.clientData*/.username}</div>{" "}
+					{/* scaledrone clientData sidro na korisnikovo ime */}
 					<div className='text'>{text}</div>
 				</div>
 			</li>
