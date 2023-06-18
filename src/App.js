@@ -1,7 +1,7 @@
-import "./App.css";
-import Messages from "./Messages";
+import "./App.css"; // stylesheet
+import Messages from "./Messages"; // render messages
 import React, { Component } from "react";
-import Input from "./Input";
+import Input from "./Input"; // render input
 
 // funkcija za dodjelu imena korisniku dodaje ime tako da spoji pridjev, i imenicu iz liste
 function randomName() {
@@ -142,12 +142,29 @@ function randomName() {
 	return adjective + noun;
 }
 
-// funkcija za dodjelu boje, i identifikacijskog boja odabirom hex broja koji se zatim pretvori u string
+// funkcija za dodjelu boje, i identifikacijskog broja odabirom hex broja koji se zatim pretvori u string
 function randomColor() {
 	return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
 }
 
 class App extends Component {
+	// konstruktor klase, Scaledrone hook
+	/*constructor() {
+		super();
+		// globalni window objekt za prikaz Scaledrone instance povezan sa skriptom u html zaglavlju
+		this.drone = new window.Scaledrone("bDsnt3dL2kTUHT3l", {
+			data: this.state.member,
+		});
+		this.drone.on("open", (error) => {
+			if (error) {
+				return console.error(error);
+			}
+			const member = { ...this.state.member };
+			member.id = this.drone.clientId;
+			this.setState({ member });
+		});
+	}*/
+
 	// inicijalizirano stanje
 	state = {
 		messages: [
@@ -158,6 +175,7 @@ class App extends Component {
 					username: "bluemoon",
 				},
 			},
+			// test stanja prikaza poruke
 		],
 		member: {
 			username: randomName(),
@@ -165,13 +183,26 @@ class App extends Component {
 		},
 	};
 
+	onSendMessage = () => {
+		const messages = this.state.messages;
+		messages.push({ text: [], member: this.state.member });
+		this.setState({ messages: messages });
+	};
+
 	render() {
 		return (
 			<div className='App'>
+				{/**div, i klasa za CSS stiliziranje naslova   */}
+				<div className='App-header'>
+					{" "}
+					<h1>GUMCHAT APP</h1>
+				</div>
 				<Messages
 					messages={this.state.messages}
 					currentMember={this.state.member}
 				/>
+				{/* prikaz komponente Input */}
+				<Input onSendMessage={this.onSendMessage} />{" "}
 				<sub>My webchat scaledrone app</sub>
 			</div>
 		);
