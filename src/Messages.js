@@ -27,11 +27,11 @@ class Messages extends Component {
 			<li className={className}>
 				<span
 					className='avatar'
-					style={{ backgroundColor: member /*.clientData*/.color }}
+					style={{ backgroundColor: member.clientData.color }}
 				/>{" "}
 				{/* scaledrone clientData sidro za boju korisnika */}
 				<div className='Message-content'>
-					<div className='username'>{member /*.clientData*/.username}</div>{" "}
+					<div className='username'>{member.clientData.username}</div>{" "}
 					{/* scaledrone clientData sidro na korisnikovo ime */}
 					<div className='text'>{text}</div>
 				</div>
