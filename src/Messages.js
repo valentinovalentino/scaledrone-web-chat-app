@@ -9,7 +9,7 @@ class Messages extends Component {
 		const { messages } = this.props;
 		return (
 			//lista poruka koje stvaramo u mapu
-			<ul className='Messages-list'>
+			<ul className='messages-list'>
 				{messages.map((m) => this.renderMessage(m))}
 			</ul>
 		);
@@ -21,8 +21,8 @@ class Messages extends Component {
 		const { currentMember } = this.props;
 		const messageFromMe = member.id === currentMember.id;
 		const className = messageFromMe
-			? "Messages-message currentMember"
-			: "Messages-message";
+			? "messages-message currentMember"
+			: "messages-message";
 		return (
 			<li className={className}>
 				<span
@@ -30,7 +30,7 @@ class Messages extends Component {
 					style={{ backgroundColor: member.clientData.color }}
 				/>{" "}
 				{/* scaledrone clientData sidro za boju korisnika */}
-				<div className='Message-content'>
+				<div className='message-content'>
 					<div className='username'>{member.clientData.username}</div>{" "}
 					{/* scaledrone clientData sidro na korisnikovo ime */}
 					<div className='text'>{text}</div>
