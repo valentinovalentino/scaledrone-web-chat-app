@@ -1,4 +1,4 @@
-import "./App.css"; // stylesheet
+import "./style.css"; // stylesheet
 import Messages from "./Messages"; // render messages
 import React, { Component } from "react";
 import Input from "./Input"; // render input
@@ -206,11 +206,11 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className='App'>
+			<div className='app'>
 				{/**div, i klasa za CSS stiliziranje naslova   */}
-				<div className='App-header'>
+				<div className='header'>
 					{" "}
-					<h1>GUMCHAT APP</h1>
+					<h1>BUBBLEGUMCHATAPP</h1>
 				</div>
 				<Messages
 					messages={this.state.messages}
@@ -218,7 +218,7 @@ class App extends Component {
 				/>
 				{/* prikaz komponente Input */}
 				<Input onSendMessage={this.onSendMessage} />{" "}
-				<sub>My webchat scaledrone app</sub>
+				<code>My webchat scaledrone app</code>
 			</div>
 		);
 	}

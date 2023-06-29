@@ -22,7 +22,7 @@ class Input extends Component {
 	render() {
 		return (
 			// forma s poljem za unos teksta i gumbom za poslat tekst u razgovor
-			<div className='Input'>
+			<div className='input'>
 				<form onSubmit={(e) => this.onSubmit(e)}>
 					<input
 						onChange={(e) => this.onChange(e)}

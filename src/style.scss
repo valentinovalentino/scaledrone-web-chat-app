@@ -1,0 +1,158 @@
+:root {
+	--main-complement: #f21bce;
+	--2nd-complement: #ff36dd;
+	--3rd-complement: #4df21b;
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin scrollbar {
+	&::-webkit-scrollbar {
+		@content;
+	}
+}
+
+body {
+	background-color: var(--2nd-complement);
+	color: var(--3rd-complement);
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	word-wrap: break-word;
+
+	.app {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100vh;
+
+		.header {
+			background-color: var(--main-complement);
+			overflow: visible;
+			width: 100%;
+			text-align: center;
+		}
+
+		.input {
+			form {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				max-width: 900px;
+				margin: 0 auto;
+
+				input {
+					background-color: var(--3rd-complement);
+					padding: 5px;
+					font-size: 16px;
+					border-radius: 8px;
+					border: 1px solid orangered;
+					flex-grow: 1;
+
+					@include placeholder {
+						color: var(--main-complement);
+					}
+				}
+
+				button {
+					padding: 5px 10px;
+					font-size: 16px;
+					background-color: orangered;
+					color: white;
+					border: none;
+					border-radius: 8px;
+					margin-left: 10px;
+				}
+			}
+		}
+
+		.messages-list {
+			padding: 20px 0;
+			max-width: 900px;
+			width: 100%;
+			margin: 0 auto;
+			list-style: none;
+			padding-left: 0;
+			flex-grow: 1;
+			-ms-overflow-style: none; /* for Internet Explorer, Edge */
+			scrollbar-width: none; /* for Firefox */
+			overflow-y: scroll;
+
+			@include scrollbar {
+				display: none;
+			}
+
+			li {
+				.avatar {
+					height: 35px;
+					width: 35px;
+					border-radius: 50%;
+					display: inline-block;
+					margin: 0 10px -10px;
+				}
+				.messages-message {
+					display: flex;
+					margin-top: 10px;
+				}
+
+				.message-content {
+					display: inline-block;
+
+					.username {
+						display: block;
+						color: var(--3rd-complement);
+						font-size: 14px;
+						padding-bottom: 4px;
+					}
+
+					.text {
+						padding: 10px;
+						max-width: 400px;
+						margin: 0;
+						border-radius: 12px;
+						background-color: cornflowerblue;
+						color: white;
+						display: inline-block;
+					}
+				}
+
+				.currentMember {
+					.message-content {
+						align-items: flex-end;
+
+						.text {
+							background-color: orangered;
+						}
+					}
+				}
+			}
+
+			code {
+				font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+					monospace;
+			}
+		}
+	}
+}
+
+.messages-message.currentMember {
+	/*justify-content: flex-end;*/
+	flex-direction: row-reverse;
+	text-align: right;
+}
