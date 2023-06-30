@@ -3,18 +3,6 @@ import React from "react";
 // klasna komponenta za poruku
 
 class Messages extends Component {
-	// funkcija za poruku
-	render() {
-		//varijabla mapa poruka koje proslijedimo
-		const { messages } = this.props;
-		return (
-			//lista poruka koje stvaramo u mapu
-			<ul className='messages-list'>
-				{messages.map((m) => this.renderMessage(m))}
-			</ul>
-		);
-	}
-
 	// funkcija u komponenti za listu za svaku poruku s imenom, avatarom, i tekstom poruke
 	renderMessage(message) {
 		const { member, text } = message;
@@ -36,6 +24,18 @@ class Messages extends Component {
 					<div className='text'>{text}</div>
 				</div>
 			</li>
+		);
+	}
+
+	// funkcija za poruku
+	render() {
+		//varijabla mapa poruka koje proslijedimo
+		const { messages } = this.props;
+		return (
+			//lista poruka koje stvaramo u mapu
+			<ul className='messages-list'>
+				{messages.map((m) => this.renderMessage(m))}
+			</ul>
 		);
 	}
 }
