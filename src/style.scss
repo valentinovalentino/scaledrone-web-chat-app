@@ -90,8 +90,8 @@ body {
 			list-style: none;
 			padding-left: 0;
 			flex-grow: 1;
-			-ms-overflow-style: none; /* for Internet Explorer, Edge */
-			scrollbar-width: none; /* for Firefox */
+			-ms-overflow-style: none;
+			scrollbar-width: none;
 			overflow-y: scroll;
 
 			@include scrollbar {
@@ -152,7 +152,6 @@ body {
 }
 
 .messages-message.currentMember {
-	/*justify-content: flex-end;*/
 	flex-direction: row-reverse;
 	text-align: right;
 }

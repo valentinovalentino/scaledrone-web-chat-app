@@ -1,4 +1,3 @@
-// funkcija za dodjelu imena korisniku dodaje ime tako da spoji pridjev, i imenicu iz liste
 export function randomName() {
 	const adjectives = [
 		"autumn",
@@ -137,7 +136,6 @@ export function randomName() {
 	return adjective + noun;
 }
 
-// funkcija za dodjelu boje, i identifikacijskog broja odabirom hex broja koji se zatim pretvori u string
 export function randomColor() {
 	return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
 }
