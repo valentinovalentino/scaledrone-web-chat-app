@@ -15,8 +15,8 @@ class Input extends Component {
 	//funkcija osigurava akciju jednom,  postavlja prvotno stanje, a upravlja isporukom poruke koju prima od app u razgovor
 	onSubmit(e) {
 		e.preventDefault();
-		this.setState({ text: "" });
 		this.props.onSendMessage(this.state.text);
+		this.setState({ text: "" });
 	}
 
 	render() {
