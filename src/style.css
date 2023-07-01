@@ -1,12 +1,12 @@
 :root {
-  --main-complement: #f21bce;
-  --2nd-complement: #ff36dd;
-  --3rd-complement: #4df21b;
+  --main-clr: #ff00ff;
+  --2nd-clr: #0da1ff;
+  --3rd-clr: #19ff5a;
 }
 
 body {
-  background-color: var(--2nd-complement);
-  color: var(--3rd-complement);
+  background-color: var(--2nd-clr);
+  color: var(--3rd-clr);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +21,7 @@ body .app {
   height: 100vh;
 }
 body .app .header {
-  background-color: var(--main-complement);
+  background-color: var(--2nd-clr);
   overflow: visible;
   width: 100%;
   height: auto;
@@ -35,7 +35,7 @@ body .app .input form {
   margin: 0 auto;
 }
 body .app .input form input {
-  background-color: var(--3rd-complement);
+  background-color: var(--3rd-clr);
   padding: 5px;
   font-size: 16px;
   border-radius: 8px;
@@ -43,16 +43,16 @@ body .app .input form input {
   flex-grow: 1;
 }
 body .app .input form input::-webkit-input-placeholder {
-  color: var(--main-complement);
+  color: var(--main-clr);
 }
 body .app .input form input:-moz-placeholder {
-  color: var(--main-complement);
+  color: var(--main-clr);
 }
 body .app .input form input::-moz-placeholder {
-  color: var(--main-complement);
+  color: var(--main-clr);
 }
 body .app .input form input:-ms-input-placeholder {
-  color: var(--main-complement);
+  color: var(--main-clr);
 }
 body .app .input form button {
   padding: 5px 10px;
@@ -94,7 +94,7 @@ body .app .messages-list li .message-content {
 }
 body .app .messages-list li .message-content .username {
   display: block;
-  color: var(--3rd-complement);
+  color: var(--3rd-clr);
   font-size: 14px;
   padding-bottom: 4px;
 }

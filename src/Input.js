@@ -24,7 +24,7 @@ class Input extends Component {
 						onChange={(e) => this.onChange(e)}
 						value={this.state.text}
 						type='text'
-						placeholder='GUMCHAT poruka'
+						placeholder='GUMCHATMSG'
 						autoFocus='true'
 					/>
 					<button>CHAT</button>

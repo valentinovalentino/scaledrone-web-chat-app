@@ -1,7 +1,7 @@
 :root {
-	--main-complement: #f21bce;
-	--2nd-complement: #ff36dd;
-	--3rd-complement: #4df21b;
+	--main-clr: #ff00ff;
+	--2nd-clr: #0da1ff;
+	--3rd-clr: #19ff5a;
 }
 
 @mixin placeholder {
@@ -26,8 +26,8 @@
 }
 
 body {
-	background-color: var(--2nd-complement);
-	color: var(--3rd-complement);
+	background-color: var(--2nd-clr);
+	color: var(--3rd-clr);
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -44,7 +44,7 @@ body {
 		height: 100vh;
 
 		.header {
-			background-color: var(--main-complement);
+			background-color: var(--2nd-clr);
 			overflow: visible;
 			width: 100%;
 			height: auto;
@@ -60,7 +60,7 @@ body {
 				margin: 0 auto;
 
 				input {
-					background-color: var(--3rd-complement);
+					background-color: var(--3rd-clr);
 					padding: 5px;
 					font-size: 16px;
 					border-radius: 8px;
@@ -68,7 +68,7 @@ body {
 					flex-grow: 1;
 
 					@include placeholder {
-						color: var(--main-complement);
+						color: var(--main-clr);
 					}
 				}
 
@@ -118,7 +118,7 @@ body {
 
 					.username {
 						display: block;
-						color: var(--3rd-complement);
+						color: var(--3rd-clr);
 						font-size: 14px;
 						padding-bottom: 4px;
 					}
