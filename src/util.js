@@ -149,7 +149,7 @@ export function randomColor() {
 	let rnd = "#" + Math.floor(Math.random() * 0xffffff).toString(16);
 	do {
 		rnd = "#" + Math.floor(Math.random() * 0xffff00).toString(16);
-	} while (rnd === "#0da1ff");
+	} while (rnd === "#6495ed");
 
 	return rnd;
 }
