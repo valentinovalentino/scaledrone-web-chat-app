@@ -147,9 +147,9 @@ export function randomName() {
 
 export function randomColor() {
 	let color = "#" + Math.floor(Math.random() * 0xffffff).toString(16);
-	if (color === "#0da1ff") {
-		color = "#" + Math.floor(Math.random() * 0xffffff).toString(16);
-	}
+	do {
+		color = "#" + Math.floor(Math.random() * 0xffff00).toString(16);
+	} while (color === "#0da1ff");
 
 	return color;
 }
