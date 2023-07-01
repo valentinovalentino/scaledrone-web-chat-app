@@ -1,7 +1,8 @@
 :root {
-  --main-clr: #ff00ff;
-  --2nd-clr: #0da1ff;
-  --3rd-clr: #19ff5a;
+  --main-clr: #262626;
+  --2nd-clr: cornflowerblue;
+  --3rd-clr: gray;
+  --4th-clr: orangered;
 }
 
 body {
@@ -21,11 +22,12 @@ body .app {
   height: 100vh;
 }
 body .app .header {
-  background-color: var(--2nd-clr);
+  background-color: var(--main-clr);
   overflow: visible;
   width: 100%;
   height: auto;
   text-align: center;
+  color: white;
 }
 body .app .input form {
   display: flex;
@@ -57,7 +59,7 @@ body .app .input form input:-ms-input-placeholder {
 body .app .input form button {
   padding: 5px 10px;
   font-size: 16px;
-  background-color: orangered;
+  background-color: var(--4th-clr);
   color: white;
   border: none;
   border-radius: 8px;
@@ -103,7 +105,7 @@ body .app .messages-list li .message-content .text {
   max-width: 400px;
   margin: 0;
   border-radius: 12px;
-  background-color: cornflowerblue;
+  background-color: var(--2nd-clr);
   color: white;
   display: inline-block;
 }
@@ -111,7 +113,7 @@ body .app .messages-list li .currentMember .message-content {
   align-items: flex-end;
 }
 body .app .messages-list li .currentMember .message-content .text {
-  background-color: orangered;
+  background-color: var(--4th-clr);
 }
 body .app .messages-list code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;

@@ -48,7 +48,7 @@ class App extends Component {
 			<div className='app'>
 				<div className='header'>
 					{" "}
-					<h1>BUBBLEGUMCHATAPP</h1>
+					<h1>GUMCHATAPP</h1>
 				</div>
 				<Messages
 					messages={this.state.messages}
