@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: var(--2nd-clr);
+  background-color: var(--main-clr);
   color: var(--3rd-clr);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -96,7 +96,7 @@ body .app .messages-list li .message-content {
 }
 body .app .messages-list li .message-content .username {
   display: block;
-  color: var(--3rd-clr);
+  color: var(--4th-clr);
   font-size: 14px;
   padding-bottom: 4px;
 }

@@ -27,7 +27,7 @@
 }
 
 body {
-	background-color: var(--2nd-clr);
+	background-color: var(--main-clr);
 	color: var(--3rd-clr);
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -120,7 +120,7 @@ body {
 
 					.username {
 						display: block;
-						color: var(--3rd-clr);
+						color: var(--4th-clr);
 						font-size: 14px;
 						padding-bottom: 4px;
 					}
